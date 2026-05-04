@@ -1,0 +1,98 @@
+/* input: Tailwind layers and CSS variables; output: global DraftRecall visual system; pos: app styling, update this header and app/README.md when changed. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-sans: "Noto Sans SC";
+  --font-mono: "Roboto Mono";
+  --color-ink: #171717;
+  --color-paper: #f7f6f1;
+  --color-line: #dedbd2;
+  --color-signal: #d83a2e;
+  --color-moss: #3f6f57;
+  --color-amber: #b7791f;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ink: #f2efe7;
+  --color-paper: #10100f;
+  --color-line: #343330;
+  --color-signal: #d96258;
+  --color-moss: #7fa58e;
+  --color-amber: #d1a45c;
+}
+
+[data-theme="light"] {
+  --color-ink: #171717;
+  --color-paper: #fbfaf6;
+  --color-line: #dedbd2;
+  --color-signal: #c94b42;
+  --color-moss: #3f6f57;
+  --color-amber: #b7791f;
+}
+
+[data-theme="forest"] {
+  --color-ink: #17211c;
+  --color-paper: #eef2ea;
+  --color-line: #c9d2c4;
+  --color-signal: #b85850;
+  --color-moss: #5f806a;
+  --color-amber: #a78355;
+}
+
+[data-theme="rose"] {
+  --color-ink: #2a2022;
+  --color-paper: #f5eeee;
+  --color-line: #dbcaca;
+  --color-signal: #a9545b;
+  --color-moss: #6e7d6f;
+  --color-amber: #a8785c;
+}
+
+[data-theme="lavender"] {
+  --color-ink: #211f2a;
+  --color-paper: #f0eef6;
+  --color-line: #d4cfdf;
+  --color-signal: #a35d6d;
+  --color-moss: #667a73;
+  --color-amber: #a48662;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--color-paper);
+  transition: background-color .35s ease, color .35s ease;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui;
+  transition: background-color .35s ease, color .35s ease;
+}
+
+body * {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, opacity, transform;
+  transition-duration: .25s;
+  transition-timing-function: ease;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}

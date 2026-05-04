@@ -1,0 +1,18 @@
+{
+  "name": "DraftRecall",
+  "short_name": "DraftRecall",
+  "description": "草稿唤醒：闹钟质询式知识内化 PWA",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f1",
+  "theme_color": "#f7f6f1",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
